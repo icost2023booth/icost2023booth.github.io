@@ -174,8 +174,10 @@ position: absolute;
                         <tr>
                             <td>
                                 <b>For</b><br>
-                                THE 25TH INTERNATIONAL CONFERENCE ON ENGINEERING OF COMPLEX COMPUTER SYSTEMS<br>
-                                ICECCS 2020
+                                The combined package of two Physical Meeting of 
+                                THE 25TH INTERNATIONAL CONFERENCE ON ENGINEERING OF COMPLEX COMPUTER SYSTEMS, ICECCS 2020<br>
+                                and THE 22nd INTERNATIONAL CONFERENCE ON FORMAL ENGINEERING METHODS, ICFEM 2020<br>
+
                             </td>
                             
                             <td>
@@ -198,55 +200,23 @@ position: absolute;
                 </td>
             </tr>
             
-
-
-            <tr class="item last toggel2">
-                <td>
-                    Virtual Meeting (Authors) of main conference and workshops<br/>(ICECCS2020 Conference Registration Fee)
-                </td>
-                
-                <td>
-                    $300.00 SGD
-                </td>
-            </tr>
-            <tr class="item last toggel1">
-                <td>
-                    Virtual Meeting (Non-author) Participants of main conference and workshops<br/>(ICECCS2020 Conference Registration Fee)
-                </td>
-                
-                <td>
-                    $100.00 SGD
-                </td>
-            </tr>
+            
             <tr class="item last toggel3">
                 <td>
-                    Physical Meeting Participants of main conference and workshops<br/>(ICECCS2020 Conference Registration Fee)
+                    Physical Meeting Participants of main conference and workshops<br/>(ICECCS2020+ICFEM2020 Conference Registration Fee)
                 </td>
                 
                 <td>
-                    $900.00 SGD
+                    $1260.00 SGD
                 </td>
             </tr>
             
-            <tr class="total toggel2">
+
+            <tr class="total ">
                 <td></td>
                 
                 <td>
-                   Total: $300.00 SGD
-                </td>
-            </tr>            
-            <tr class="total toggel1">
-                <td></td>
-                
-                <td>
-                   Total: $100.00 SGD
-                </td>
-            </tr>
-            <tr class="total toggel3">
-                <td></td>
-                
-                <td>
-                   Total: $900.00 SGD
+                   Total: $1260.00 SGD
                 </td>
             </tr>
 
@@ -256,7 +226,7 @@ position: absolute;
                     <table>
                         <tr>
                             <td>
-                                This is to acknowledge that the amount of SGD <b class="toggel2">300</b><b class="toggel1">100</b><b class="toggel3">900</b> has been paid by <b data="first_name" style = "text-transform:capitalize;display:inline-block;"></b> <b data="last_name" style = "text-transform:capitalize;display:inline-block;"></b>.<br>
+                                This is to acknowledge that the amount of SGD <b class="">900</b> has been paid by <b data="first_name" style = "text-transform:capitalize;display:inline-block;"></b> <b data="last_name" style = "text-transform:capitalize;display:inline-block;"></b>.<br>
                             </td>
                             <td>
                             </td>
@@ -316,23 +286,8 @@ position: absolute;
 
    function toggle(amount_val){
        console.log(amount_val<=300,amount_val>100,amount_val>=900 ,"===!<<>>>")
-       if (amount_val<=100){
-            var hidden="toggel1"
-       }else if (amount_val>=900){
-            var hidden="toggel3"
-       }
-       else{
-            var hidden="toggel2"
-       }
-       ["toggel1","toggel2","toggel3"] .forEach(ele =>{
-           if (ele !=hidden){
-           console.log("find ...", ele)
-            var els = document.getElementsByClassName(ele);
-            Array.prototype.forEach.call(els, function(el) {
-                el.style.display="none";
-             });
-           }
-        })
+        var hidden="toggel3"
+    
    }
 
    function render_date(){
