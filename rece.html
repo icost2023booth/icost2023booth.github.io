@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Receipt for ICECCS2020</title>
-    
+    <title>Receipt for ICOST 2023</title>
     <style>
       .ppp {
     background-color: #9e9e9e;
@@ -168,17 +167,14 @@ position: absolute;
             
 
 
-     <tr class="information">
+            <tr class="information">
                 <td colspan="2">
                     <table>
                         <tr>
                             <td>
-                                <b>For</b><br/>
-                                The combined package of two Physical Meeting of <br/>
-                                THE 25TH INTERNATIONAL CONFERENCE ON ENGINEERING OF COMPLEX COMPUTER SYSTEMS, ICECCS 2020<br/>
-                                and <br/>
-                                THE 22nd INTERNATIONAL CONFERENCE ON FORMAL ENGINEERING METHODS, ICFEM 2020<br/>
-
+                                <b>For</b><br>
+                                The 20th International Conference On Smart Living and Public Health<br>
+                                ICOST 2023
                             </td>
                             
                             <td>
@@ -201,33 +197,31 @@ position: absolute;
                 </td>
             </tr>
             
-            
-            <tr class="item last toggel3">
+
+            <tr class="item last ">
                 <td>
-                    Physical Meeting Participants of main conference and workshops<br/>(ICECCS2020+ICFEM2020 Conference Registration Fee)
+                    <div>ICOST2023 Conference Registration Fee:</div>
+                    <b data="feetype" fid="1"/><br/>
                 </td>
                 
                 <td>
-                    $1260.00 SGD
+                    $<b data="amount"></b>(USD) 
                 </td>
             </tr>
-            
-
             <tr class="total ">
                 <td></td>
                 
                 <td>
-                   Total: $1260.00 SGD
+                   Total: $<b data="amount"></b>(USD) 
                 </td>
-            </tr>
-
+            </tr>            
 
             <tr class="information">
                 <td colspan="2">
                     <table>
                         <tr>
                             <td>
-                                This is to acknowledge that the amount of SGD <b class="">1260</b> has been paid by <b data="first_name" style = "text-transform:capitalize;display:inline-block;"></b> <b data="last_name" style = "text-transform:capitalize;display:inline-block;"></b>.<br>
+                                This is to acknowledge that the amount of USD <b class="" data="amount"></b>has been paid by <b data="first_name" style = "text-transform:capitalize;display:inline-block;"></b> <b data="last_name" style = "text-transform:capitalize;display:inline-block;"></b>.<br>
                             </td>
                             <td>
                             </td>
@@ -244,16 +238,15 @@ position: absolute;
 
                         <tr>
                             <td>
-                                Dr. YangLiu<br/><br/>
-                                Finance Chair of the ICECCS2020 and the ICFEM2020 <br/>
+                                A/Pr. Hamdi Aloulou<br/><br/>
+                                ICOST2023 Program Committee Chairs<br/>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                Telephone:<tel> +65 67906706</tel><br/>
-                                Fax:+65 67926559<br/>
-                                Conference Website: <a href="https://formal-analysis.com/iceccs/2020/">ICECCS2020</a> and <a href="https://formal-analysis.com/icfem/2020/">ICFEM2020</a> <br/>
+                                E-Mail:<a href="mailto:icost2023@easychair.org">icost2023@easychair.org</a><br/>
+                                Conference Website: <a href="https://www.icost-society.org/">https://www.icost-society.org/</a> <br/>
 
                             </td>
                         </tr>
@@ -263,6 +256,7 @@ position: absolute;
                 </td>
             </tr>
             
+
 
 
         </table>
@@ -285,11 +279,6 @@ position: absolute;
       }
    }
 
-   function toggle(amount_val){
-       console.log(amount_val<=300,amount_val>100,amount_val>=900 ,"===!<<>>>")
-        var hidden="toggel3"
-    
-   }
 
    function render_date(){
       let today = new Date().toLocaleDateString()
@@ -299,34 +288,28 @@ position: absolute;
 
 
 
-        var btnPrint=function () {
-            $("#dvContainer").show();
-//    $("#printarea").show();
-    window.print();
+    var btnPrint=function () {
+        $("#dvContainer").show();
+        //    $("#printarea").show();
+            window.print();
 
-        }
+    }
 
       $( document ).ready(
-            function(){
-               render_date();
-               console.log(getParamsAsObject);
-               console.log(getParamsAsObject.amount,parseInt(getParamsAsObject["amount"]),"!!")
-                toggle(parseInt(getParamsAsObject.amount)) 
-/*               if (parseInt(getParamsAsObject.amount)==300){
-                  toggle(true)
-               }else{
-                  toggle(false)
-               } */
+        function(){
+           render_date();
+           console.log(getParamsAsObject);
+           console.log(getParamsAsObject.amount,parseInt(getParamsAsObject["amount"]),"!!")
 
-                for (var k in getParamsAsObject) {
-                    if (getParamsAsObject.hasOwnProperty(k)) {
-                       var value = getParamsAsObject[k];
-                       render_field(k,value)
-                    }
+            for (var k in getParamsAsObject) {
+                if (getParamsAsObject.hasOwnProperty(k)) {
+                   var value = getParamsAsObject[k];
+                   render_field(k,value)
                 }
+            }
 
-               btnPrint()
-            });
+           btnPrint()
+        });
     </script>
 
 
